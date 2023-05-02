@@ -3,3 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 
+
+.main{
+    border: 20px solid #ff5000;
+}
