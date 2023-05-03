@@ -5,6 +5,7 @@ import imghead from "../public/images/nombre.png";
 import consejos from '../public/images/100consejos.png'
 import fotoAgusto from '../public/images/foto.png'
 import titulo from '../public/images/titulo.png'
+import Videos from '../components/videos'
 
 
 export default function Home() {
@@ -24,7 +25,9 @@ export default function Home() {
         <p className='font-bold text-justify px-7 text-[10px] md:text-[18px] lg:text-[32px]'>
           Bienvenidos a Las Voces del Poder, los verdaderos protagonistas en esta tercera edición de 100 Consejos de Poder. En las siguientes conversaciones encontrarán valiosas experiencias y consejos ofrecidos directamente por lideres políticos que han logrado ocupar la silla de la victoria.
         </p>
-        <h1>Aqui vamos a crear un componente que llame los videos del backend</h1>
+        <div>
+        <Videos /> 
+        </div>
       </div>    
     </div>
   );
