@@ -1,16 +1,22 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
+import { SourceProps } from 'react-player/base'
+import Image from "next/image";
 
 
-export default function Videos() {
+export default function Videos(props: { urlvideo1: string , urlvideo2: string , title1: string, title2: string}) {
     return (
         <div>
-             <div className='w-100 flex justify-center flex-wrap'>
-            <div className='m-5'>
+            <div className='w-100 flex justify-center flex-wrap'>
+            <div className='flex flex-col items-center'>
+            <div className='mt-[10px]'>
+            <Image src={props.title1} width={320} height={100} objectFit='cover'/>
+            </div>  
+            <div className=''>
             <ReactPlayer 
-            url='https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4'
+            url={props.urlvideo1}
                     width='250px'
-                    height='550px'
+                    height='480px'
                     controls
                     config={{ file: { 
                         attributes: {
@@ -19,11 +25,16 @@ export default function Videos() {
                       }}}
             />
             </div>
-            <div className='m-5'>
+            </div>
+            <div className='flex flex-col items-center'>
+            <div className='mt-[10px]'>
+            <Image src={props.title2} width={320} height={100} objectFit='cover'/>
+            </div>
+            <div className=''>
             <ReactPlayer 
-            url='https://cienconpoder.s3.us-east-2.amazonaws.com/8379E4c0-F777-404F-A229-E24070fd38e3-002.mp4'
+            url={props.urlvideo2}
                     width='250px'
-                    height='550px'
+                    height='480px'
                     controls
                     config={{ file: { 
                         attributes: {
@@ -32,6 +43,7 @@ export default function Videos() {
                       }}}
              /> 
             </div> 
+            </div>
         </div>
         </div>
        

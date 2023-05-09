@@ -6,7 +6,15 @@ import consejos from '../public/images/100consejos.png'
 import fotoAgusto from '../public/images/foto.png'
 import titulo from '../public/images/titulo.png'
 import Videos from '../components/videos'
-
+import Cathy from '../public/images/nombres/Cathy_Juvinado.svg'
+import Carolina from '../public/images/nombres/Carolina_Arbelaez.svg'
+import Claudia from '../public/images/nombres/Claudia_Lopez.svg'
+import David from '../public/images/nombres/David_Luna.svg'
+import Inti from '../public/images/nombres/Inti_Asprilla.svg'
+import Nicolas from '../public/images/nombres/Nicolas_Garcia.svg'
+import Paloma from '../public/images/nombres/Paloma_Valencia.svg'
+import Roy from '../public/images/nombres/Roy_Barreras.svg'
+import Footer from '../components/footer'
 
 export default function Home() {
   return (
@@ -22,12 +30,15 @@ export default function Home() {
         <div className="text-center">
           <Image src={fotoAgusto} objectFit='cover'/>
         </div>
-        <p className='font-bold text-justify px-7 text-[10px] md:text-[18px] lg:text-[32px]'>
+        <p className='font-bold text-justify px-7 text-[12px] md:text-[18px] lg:text-[32px]'>
           Bienvenidos a Las Voces del Poder, los verdaderos protagonistas en esta tercera edición de 100 Consejos de Poder. En las siguientes conversaciones encontrarán valiosas experiencias y consejos ofrecidos directamente por lideres políticos que han logrado ocupar la silla de la victoria.
         </p>
-        <div>
-        <Videos /> 
+        <div className='mb-[25px]'>
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4' title1={Cathy} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/8379E4c0-F777-404F-A229-E24070fd38e3-002.mp4' title2={Claudia}/>
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/Cd9cab2d-7Ddf-432C-Abd4-E39f9dcd98d9.mp4' title1={David} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/E0c9e6e6-72C5-401E-9507-B991092e5c17.mp4' title2={Nicolas}/> 
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/E9491d25-39E7-4661-8Fe9-3C34a25479f1.mp4' title1={Carolina} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4' title2={Inti}/> 
         </div>
+        <Footer/>
       </div>    
     </div>
   );
