@@ -30,7 +30,7 @@ export default function Home() {
         <div className="text-center">
           <Image src={fotoAgusto} objectFit='cover'/>
         </div>
-        <p className='font-bold text-justify px-7 text-[12px] md:text-[18px] lg:text-[32px]'>
+        <p className='font-bold text-justify px-7 text-[17px] md:text-[24px] lg:text-[32px]'>
           Bienvenidos a Las Voces del Poder, los verdaderos protagonistas en esta tercera edición de 100 Consejos de Poder. En las siguientes conversaciones encontrarán valiosas experiencias y consejos ofrecidos directamente por lideres políticos que han logrado ocupar la silla de la victoria.
         </p>
         <div className='mb-[25px]'>
