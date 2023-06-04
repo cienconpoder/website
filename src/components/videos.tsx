@@ -4,7 +4,7 @@ import { SourceProps } from 'react-player/base'
 import Image from "next/image";
 
 
-export default function Videos(props: { urlvideo1: string , urlvideo2: string , title1: string, title2: string}) {
+export default function Videos(props: { urlvideo1: string , urlvideo2: string , title1: string, title2: string, thumbnail1: string, thumbnail2: string}) {
     return (
         <div>
             <div className='w-100 flex justify-center flex-wrap'>
@@ -14,6 +14,7 @@ export default function Videos(props: { urlvideo1: string , urlvideo2: string , 
             </div>  
             <div className=''>
             <ReactPlayer 
+            light = { < Image  src = {props.thumbnail1} /> }
             url={props.urlvideo1}
                     width='250px'
                     height='480px'
@@ -33,6 +34,7 @@ export default function Videos(props: { urlvideo1: string , urlvideo2: string , 
             <div className=''>
             <ReactPlayer 
             url={props.urlvideo2}
+            light = { < Image  src = {props.thumbnail2}  /> }
                     width='250px'
                     height='480px'
                     controls
