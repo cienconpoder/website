@@ -15,6 +15,12 @@ import Nicolas from '../public/images/nombres/Nicolas_Garcia.svg'
 import Paloma from '../public/images/nombres/Paloma_Valencia.svg'
 import Roy from '../public/images/nombres/Roy_Barreras.svg'
 import Footer from '../components/footer'
+import CathyTum from '../public/images/thumbnails/CathyJuvinao_tum.svg'
+import CaludiaTum from '../public/images/thumbnails/ClaudiaLopez_tum.svg'
+import DavidLunaTum from '../public/images/thumbnails/DavidLuna_tum.svg'
+import NicolasGarTum from '../public/images/thumbnails/NicolasGarcia_tum.svg'
+import CarolinaArbeTum from '../public/images/thumbnails/CaroArbelaez_tum.svg'
+import IntiAprillaTum from '../public/images/thumbnails/IntiAsprilla_tum.svg'
 
 export default function Home() {
   return (
@@ -34,9 +40,9 @@ export default function Home() {
           Bienvenidos a Las Voces del Poder, los verdaderos protagonistas en esta tercera edición de 100 Consejos de Poder. En las siguientes conversaciones encontrarán valiosas experiencias y consejos ofrecidos directamente por lideres políticos que han logrado ocupar la silla de la victoria.
         </p>
         <div className='mb-[25px]'>
-        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4' title1={Cathy} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/8379E4c0-F777-404F-A229-E24070fd38e3-002.mp4' title2={Claudia}/>
-        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/Cd9cab2d-7Ddf-432C-Abd4-E39f9dcd98d9.mp4' title1={David} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/E0c9e6e6-72C5-401E-9507-B991092e5c17.mp4' title2={Nicolas}/> 
-        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/E9491d25-39E7-4661-8Fe9-3C34a25479f1.mp4' title1={Carolina} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4' title2={Inti}/> 
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4' thumbnail1={CathyTum} title1={Cathy} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/8379E4c0-F777-404F-A229-E24070fd38e3-002.mp4' thumbnail2={CaludiaTum} title2={Claudia}/>
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/Cd9cab2d-7Ddf-432C-Abd4-E39f9dcd98d9.mp4' thumbnail1={DavidLunaTum} title1={David} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/E0c9e6e6-72C5-401E-9507-B991092e5c17.mp4' thumbnail2={NicolasGarTum} title2={Nicolas}/> 
+        <Videos urlvideo1='https://cienconpoder.s3.us-east-2.amazonaws.com/E9491d25-39E7-4661-8Fe9-3C34a25479f1.mp4' thumbnail1={CarolinaArbeTum} title1={Carolina} urlvideo2='https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4' thumbnail2={IntiAprillaTum} title2={Inti}/> 
         </div>
         <Footer/>
       </div>    
