@@ -7,3 +7,39 @@
 .main{
     border: 20px solid #ff5000;
 }
+
+.button {
+    width: fit-content;
+    text-decoration: none;
+    background-color: #3483fa;
+    padding: 0 2rem;
+    height: 50px;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition-duration: 0.3s;
+  }
+
+  .spinner {
+    border: 3px solid #e2e2e2;
+    border-radius: 50%;
+    border-left-color: white;
+    animation: spin 0.8s ease infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

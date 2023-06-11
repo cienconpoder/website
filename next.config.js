@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
-  basePath: '',
   images: {
     loader: 'akamai',
     path: '',
-  }
+  },
+  api: {
+    externalResolver: true,
+  },
 }
 
 module.exports = nextConfig
