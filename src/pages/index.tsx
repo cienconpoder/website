@@ -20,6 +20,8 @@ import Alejandro from "../public/images/nombres/Alejandro_Gaviria.svg";
 import AlejandroTum from "../public/images/thumbnails/Alejandro_Gaviria_tum.svg"
 import Roy from "../public/images/nombres/Roy_Barreras.svg"
 import RoyTum from "../public/images/thumbnails/Roy_Barreras_tum.svg"
+import {MercadoPagoButton} from "../components/mercadopagoBoton"
+import { Product } from "../mock/product";
 
 
 
@@ -49,17 +51,17 @@ export default function Home() {
             urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4"
             thumbnail1={CathyTum}
             title1={Cathy}
+            urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4"
+            thumbnail2={RoyTum}
+            title2={Roy}
+          />
+          <Videos
             urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/8379E4c0-F777-404F-A229-E24070fd38e3-002.mp4"
             thumbnail2={CaludiaTum}
             title2={Claudia}
-          />
-          <Videos
-            urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/Cd9cab2d-7Ddf-432C-Abd4-E39f9dcd98d9.mp4"
-            thumbnail1={DavidLunaTum}
-            title1={David}
-            urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/E0c9e6e6-72C5-401E-9507-B991092e5c17.mp4"
-            thumbnail2={NicolasGarTum}
-            title2={Nicolas}
+            urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/Alejandro+Gaviria.mp4"
+            thumbnail1={AlejandroTum}
+            title1={Alejandro}
           />
           <Videos
             urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/E9491d25-39E7-4661-8Fe9-3C34a25479f1.mp4"
@@ -70,14 +72,16 @@ export default function Home() {
             title2={Inti}
           />
           <Videos
-            urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/Alejandro+Gaviria.mp4"
-            thumbnail1={AlejandroTum}
-            title1={Alejandro}
-            urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4"
-            thumbnail2={RoyTum}
-            title2={Roy}
+          urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/Cd9cab2d-7Ddf-432C-Abd4-E39f9dcd98d9.mp4"
+          thumbnail1={DavidLunaTum}
+          title1={David}
+          urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/E0c9e6e6-72C5-401E-9507-B991092e5c17.mp4"
+          thumbnail2={NicolasGarTum}
+          title2={Nicolas}
           />
+          
         </div>
+        <MercadoPagoButton product={Product}/>
         <Footer />
       </div>
     </div>

@@ -1,0 +1,11 @@
+export interface IProduct {
+    id: number;
+    title: string;
+    price: number;
+  }
+  
+  export const Product: IProduct = {
+    id: 1,
+    title: "100 consejos de poder - Autofirmado",
+    price: 100000,
+  };
