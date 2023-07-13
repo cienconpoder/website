@@ -51,7 +51,7 @@ export default function Home() {
             urlvideo1="https://cienconpoder.s3.us-east-2.amazonaws.com/2748D814-Fe0e-440C-B3ab-116F72c42329.mp4"
             thumbnail1={CathyTum}
             title1={Cathy}
-            urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/Cde8393f-6A28-4F56-9108-6F416f490155.mp4"
+            urlvideo2="https://cienconpoder.s3.us-east-2.amazonaws.com/Roy.mp4"
             thumbnail2={RoyTum}
             title2={Roy}
           />
