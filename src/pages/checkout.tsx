@@ -44,7 +44,7 @@ export default function checkout() {
       useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const status = urlParams.get("status");
-        const paymentid = urlParams.get("paymentid");   
+        const paymentid = urlParams.get("payment_id");   
         
         if(paymentid) {
           GuardarDatos()
