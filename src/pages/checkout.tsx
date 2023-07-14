@@ -4,20 +4,25 @@ import Image from "next/image";
 import Form  from "../components/form";
 import Footer from "../components/footer";
 import Header from "../public/images/header-100.png"
+import { payment } from 'mercadopago';
+import { useRouter } from 'next/router';
 interface NotificationType {
     isOpen: boolean;
     type: "approved" | "failure" | null;
     content: string;
   }
 export default function checkout() {
+    const router = useRouter()
     const [buy,setBuy] = useState<Boolean>(false)
     const [notification, setNotification] = useState<NotificationType>({
         isOpen: false,
         type: null,
         content: "",
       });
+      const [payment, setPayment] = useState<Boolean>(true)
+      console.log(payment)
       const handleBuy = () => {setBuy(buy == false ? true : false)}
-      const GuardarDatos = (payment_id)=>{
+      const GuardarDatos = (payment_id: string | null)=>{
         fetch('https://sheetdb.io/api/v1/62ihjomr8ewxq', {
         method: 'POST',
         headers: {
@@ -47,8 +52,10 @@ export default function checkout() {
         const status = urlParams.get("status");
         const paymentid = urlParams.get("payment_id");   
         
-        if(paymentid) {
+        if(paymentid && payment) {
           GuardarDatos(paymentid)
+          setPayment(false)
+          router.push('/checkout')
         }
         if (status === "approved") {
           setNotification({
@@ -57,7 +64,6 @@ export default function checkout() {
             type: "approved",
           });
           console.log("aprobado")
-          GuardarDatos(paymentid)
         } else if (status === "failure") {
           setNotification({
             content: "Pago fallido!",
@@ -74,7 +80,7 @@ export default function checkout() {
             content: "",
           });
         }, 5000);
-      }, []);
+      }, [payment]);
   return (
     <div className="m-5">
         <div className='text-center'>
