@@ -41,7 +41,7 @@ export const MercadoPagoButton = ({ product }: MercadoPagoButtonProps) => {
           null
       ) : (
         <a className="hover:cursor-pointer" href={url!}>
-          <Image src={Botonsvg} height={190} objectFit='cover'/>
+          <button className="w-[80%] h-[100px] bg-[#63d5f9] text-center flex justify-center items-center mx-auto font-sans text-[26px] font-bold text-white " type="submit">Realizar Pago</button>
         </a>
       )}
     </div>

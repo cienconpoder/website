@@ -17,10 +17,12 @@
     "classnames": "^2.3.2",
     "mercadopago": "^1.5.16",
     "next": "12.3.0",
+    "nodemailer": "^6.9.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.35.0",
-    "react-player": "^2.12.0"
+    "react-hook-form": "^7.45.1",
+    "react-player": "^2.12.0",
+    "sweetalert2": "^11.7.16"
   },
   "devDependencies": {
     "@types/mercadopago": "^1.5.8",

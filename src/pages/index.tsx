@@ -20,8 +20,7 @@ import Alejandro from "../public/images/nombres/Alejandro_Gaviria.svg";
 import AlejandroTum from "../public/images/thumbnails/Alejandro_Gaviria_tum.svg"
 import Roy from "../public/images/nombres/Roy_Barreras.svg"
 import RoyTum from "../public/images/thumbnails/Roy_Barreras_tum.svg"
-import {MercadoPagoButton} from "../components/mercadopagoBoton"
-import { Product } from "../mock/product";
+import Botonsvg from "../public/images/botonPago.svg"
 
 
 
@@ -79,9 +78,10 @@ export default function Home() {
           thumbnail2={NicolasGarTum}
           title2={Nicolas}
           />
-          
         </div>
-        <MercadoPagoButton product={Product}/>
+        <a className="hover:cursor-pointer mx-auto" href="/checkout">
+          <Image src={Botonsvg} height={190} objectFit='cover'/>
+        </a>
         <Footer />
       </div>
     </div>
