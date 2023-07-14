@@ -15,6 +15,30 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const URL = "https://www.lasvocesdelpoder.co/checkout/";
 
+    const GuardarDatos = ()=>{
+      fetch('https://sheetdb.io/api/v1/62ihjomr8ewxq', {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          data: [
+              {
+                  "telefono": sessionStorage.getItem("telefono")?.toString(),
+                  "nombre": sessionStorage.getItem("nombre")?.toString(),
+                  "documento": sessionStorage.getItem("documento")?.toString(),
+                  "correo electronico": sessionStorage.getItem("email")?.toString(),
+                  "dedicatoria": sessionStorage.getItem("dedicatoria")?.toString(),
+                  "direccion": sessionStorage.getItem("direccion")?.toString()
+              }
+          ]
+      })
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+    }
+
     try {
       const preference: CreatePreferencePayload = {
         items: [
@@ -33,6 +57,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       };
 
       const response = await mercadopago.preferences.create(preference);
+      GuardarDatos()
       res.status(200).send({ url: response.body.init_point });
     } catch (error) {}
   } else {
