@@ -8,12 +8,10 @@ mercadopago.configure({
 });
 
 
-
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const product: IProduct = req.body.product;
-
-    const URL = "https://www.lasvocesdelpoder.co/checkout/";
+    const URL = "https://www.lasvocesdelpoder.co/checkout";
 
 
     try {
@@ -34,12 +32,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       };
 
       const response = await mercadopago.preferences.create(preference);
-      res.status(200).send({ url: response.body.init_point });
+      res.status(200).send({ url: response.body.init_point })
     } catch (error) {}
   } else {
     res.status(400).json({ message: "Method not allowed" });
   }
-};
+}
 
 export const config = {
   api: {

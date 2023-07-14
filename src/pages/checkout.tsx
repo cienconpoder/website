@@ -44,7 +44,11 @@ export default function checkout() {
       useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const status = urlParams.get("status");
-    
+        const paymentid = urlParams.get("paymentid");   
+        
+        if(paymentid) {
+          GuardarDatos()
+        }
         if (status === "approved") {
           setNotification({
             content: "Pago aprobado!",
