@@ -17,7 +17,7 @@ export default function checkout() {
         content: "",
       });
       const handleBuy = () => {setBuy(buy == false ? true : false)}
-      const GuardarDatos = ()=>{
+      const GuardarDatos = (payment_id)=>{
         fetch('https://sheetdb.io/api/v1/62ihjomr8ewxq', {
         method: 'POST',
         headers: {
@@ -32,7 +32,8 @@ export default function checkout() {
                     "documento": sessionStorage.getItem("documento")?.toString(),
                     "correo electronico": sessionStorage.getItem("email")?.toString(),
                     "dedicatoria": sessionStorage.getItem("dedicatoria")?.toString(),
-                    "direccion": sessionStorage.getItem("direccion")?.toString()
+                    "direccion": sessionStorage.getItem("direccion")?.toString(),
+                    "payment_id": payment_id
                 }
             ]
         })
@@ -47,7 +48,7 @@ export default function checkout() {
         const paymentid = urlParams.get("payment_id");   
         
         if(paymentid) {
-          GuardarDatos()
+          GuardarDatos(paymentid)
         }
         if (status === "approved") {
           setNotification({
@@ -56,7 +57,7 @@ export default function checkout() {
             type: "approved",
           });
           console.log("aprobado")
-          GuardarDatos()
+          GuardarDatos(paymentid)
         } else if (status === "failure") {
           setNotification({
             content: "Pago fallido!",
