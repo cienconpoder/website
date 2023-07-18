@@ -20,7 +20,6 @@ export default function checkout() {
         content: "",
       });
       const [payment, setPayment] = useState<Boolean>(true)
-      console.log(payment)
       const handleBuy = () => {setBuy(buy == false ? true : false)}
       const GuardarDatos = (payment_id: string | null)=>{
         fetch('https://sheetdb.io/api/v1/62ihjomr8ewxq', {
@@ -38,7 +37,8 @@ export default function checkout() {
                     "correo electronico": sessionStorage.getItem("email")?.toString(),
                     "dedicatoria": sessionStorage.getItem("dedicatoria")?.toString(),
                     "direccion": sessionStorage.getItem("direccion")?.toString(),
-                    "payment_id": payment_id
+                    "payment_id": payment_id,
+                    "ciudad":sessionStorage.getItem("ciudad")?.toString(),
                 }
             ]
         })
@@ -51,7 +51,6 @@ export default function checkout() {
         const urlParams = new URLSearchParams(window.location.search);
         const status = urlParams.get("status");
         const paymentid = urlParams.get("payment_id");   
-        
         if(paymentid && payment) {
           GuardarDatos(paymentid)
           setPayment(false)

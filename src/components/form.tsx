@@ -29,6 +29,7 @@ export default function Form() {
     sessionStorage.setItem("email",userInfo.mail);
     sessionStorage.setItem("direccion",userInfo.address);
     sessionStorage.setItem("dedicatoria",userInfo.dedicatory);
+    sessionStorage.setItem("ciudad",userInfo.city);
     setData(true)
   };
 
@@ -52,6 +53,9 @@ export default function Form() {
       <label htmlFor="direccion">Dirección de envio</label>
       <input {...register("address")} name="address" type="text" required />
 
+      <label htmlFor="ciudad">Ciudad de envio</label>
+      <input {...register("city")} name="city" type="text" required />
+
       <label htmlFor="dedicatory">A quien va dedicado</label>
       <input {...register("dedicatory")} name="dedicatory" type="text"  required />
       {!data ?
@@ -61,7 +65,12 @@ export default function Form() {
     }
     </form>
     {data ?
-    <MercadoPagoButton product={Product}/>  :
+    <>
+    <h1 className="text-center text-[25px] text-[#63d5f9]">Importante</h1>
+    <p className="text-start mx-auto text-[15px]">Recuerde solo hacemos envíos a ciudades de Colombia.</p>
+    <p className="text-start mx-auto text-[15px]">Una vez haga el pago regrese al sitio para registrar correctamente sus datos, evite cerrar la pestaña de mercadopago antes de volver al sitio.</p>
+    <MercadoPagoButton product={Product}/>  
+    </>:
     null}
     </>
   );
